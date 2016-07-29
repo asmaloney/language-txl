@@ -1,0 +1,57 @@
+'scopeName': 'source.txl'
+'name': 'TXL'
+'fileTypes': [
+  'txl'
+  'grm'
+]
+'patterns': [
+  {
+    'comment' : 'Comment'
+    'name'    : 'comment'
+    'match'   : '(?<!\')%.*'
+  }
+  {
+    'comment' : 'Multi-line comment'
+    'name'    : 'comment'
+    'begin'   : '(?<!\')%[\\({]'
+    'end'     : '(?<!\')[\\)}]%'
+  }
+  {
+    'comment' : 'Main keywords'
+    'name'    : 'keyword.control.txl'
+    'match'   : '\\b(?<!\')(define|end|function|keys|compounds|tokens|comments|replace|construct|by|replace|rule|deconstruct|not|where|all|not|assert|export|import|redefine|external|match|skipping|include|then)\\b'
+  }
+  {
+    'comment' : 'Preprocessor keywords'
+    'name'    : 'meta.preprocessor.txl'
+    'match'   : '(?<!\')#\\s*(pragma|endif|else|define|undef|undefine|ifn|elifn|elifdef|elifndef|ifndef|ifdef|if|end)'
+    'captures':
+      '1':
+        'name': 'keyword.control.txl'
+  }
+  {
+    'comment' : 'Built-in functions'
+    'name'    : 'entity.name.function.txl'
+    'match'   : '(?<!\')\\[(not|opt|repeat|list|see|push|pop|\\+|-|/|\\*|=|<|>|\\^|\\.|div|rem|:|#|index|_|length|select|head|tail|,|~=|>=|<=|grep|\\$|quote|unquote|parse|unparse|reparse|typeof|istype|read|write|fget|getp|fput|putp|fputp|puts|fputs|fclose|fopen|fgets|message|pragma|quit|system|pipe|attr) .+?\\]'
+  }
+  {
+    'comment' : 'Formatting hints'
+    'name'    : 'constant.language.txl'
+    'match'   : '(?<!\')\\[(NL|EX(_\\d+)?|IN(_\\d+)?|SP(_\\d+)?|TAB(_\\d+)?|SPON|SPOFF|\\!|round|trunc|toupper|tolower|get|put|gets|print|printattr|debug|breakpoint)\\]'
+  }
+  {
+    'comment' : 'Regular non-terminals'
+    'name'    : 'storage.type.txl'
+    'match'   : '(?<!\')\\[.+?\\]'
+  }
+  {
+    'comment' : 'Numeric constants'
+    'name'    : 'constant.numeric.txl'
+    'match'   : '\\b(\\d+)|(\\d+\\.\\d+([\\+-][Ee]\\d+)?)\\b'
+  }
+  {
+    'comment' : 'String literals'
+    'name'    : 'string.quoted.double.txl'
+    'match'   : '".*"'
+  }
+]
