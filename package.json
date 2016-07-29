@@ -1,7 +1,7 @@
 {
   "name": "language-txl",
   "author": "Andy Maloney <asmaloney@gmail.com> (https://asmaloney.com)",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Atom syntax highlighting for TXL grammar and rule files.",
   "engines": {
     "atom": "*"
@@ -12,10 +12,9 @@
     "grammar",
     "syntax"
   ],
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/asmaloney/language-txl.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asmaloney/language-txl.git"
   },
   "bugs": {
     "url": "https://github.com/asmaloney/language-txl/issues"
