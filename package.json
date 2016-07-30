@@ -1,7 +1,7 @@
 {
   "name": "language-txl",
   "author": "Andy Maloney <asmaloney@gmail.com> (https://asmaloney.com)",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Atom syntax highlighting for TXL grammar and rule files.",
   "engines": {
     "atom": "*"
