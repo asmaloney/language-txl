@@ -6,15 +6,18 @@
 ]
 'patterns': [
   {
-    'comment' : 'Comment'
-    'name'    : 'comment'
-    'match'   : '(?<!\')%.*'
+    'comment' : 'Multi-line comment'
+    'name'    : 'comment.block.txl'
+    'begin'   : '%([\\({])'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.txl'
+    'end'     : '\\1%'
   }
   {
-    'comment' : 'Multi-line comment'
-    'name'    : 'comment'
-    'begin'   : '(?<!\')%[\\({]'
-    'end'     : '(?<!\')[\\)}]%'
+    'comment' : 'Comment'
+    'name'    : 'comment.txl'
+    'match'   : '(?<!\')%.*'
   }
   {
     'comment' : 'Main keywords'
