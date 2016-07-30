@@ -54,4 +54,9 @@
     'name'    : 'string.quoted.double.txl'
     'match'   : '".*"'
   }
+  {
+    'comment' : 'String literals'
+    'name'    : 'string.quoted.single.txl'
+    'match'   : "'[^\\s]*"
+  }
 ]
